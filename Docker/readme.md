@@ -19,8 +19,8 @@ $ docker run [OPTION] CONTAINER_ID COMMAND
  - Give orders to running container
 ```bash
 $ docker exec [OPTION} CONTAINER_ID COMMAND
-```
- 	- Example
+```  
+ - Example
 Go to the inside of running tensorflow conatainer [/bin/bash] with keyboard option [it]
 ```bash
 $ docker exec -it CONTAINER_ID /bin/bash
