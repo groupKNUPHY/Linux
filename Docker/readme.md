@@ -36,7 +36,7 @@ This is Ubuntu base
 
  - Make new image using your container
 If you install some programs or change some values in you container and    
-the changed information is applied to the image, you can use [commit] commands.  
+want to make the changed information applied to the image, you can use [commit] commands.  
 This can makes new image by using your working container
 ```bash
 docker commit CONTAINER_ID NAME_OF_NEW_IMAGE
