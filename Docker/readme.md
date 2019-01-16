@@ -20,13 +20,13 @@ $ docker run [OPTION] CONTAINER_ID COMMAND
 ```bash
 $ docker exec [OPTION} CONTAINER_ID COMMAND
 ```
-  - Example
+   - Example
 Go to the inside of running tensorflow conatainer [/bin/bash] with keyboard option [it]
 ```bash
 $ docker exec -it CONTAINER_ID /bin/bash
 ```  
 Then, you can see the terminal interface similar to that of LINUX  
-Moreover,LINUX commands works well  
+Moreover, LINUX commands works well  
 To clarifiy the OS of images,
 ```bash
 $ uname -a
