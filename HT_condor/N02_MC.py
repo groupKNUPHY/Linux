@@ -1,7 +1,9 @@
 import random
 import math
+import sys
 
-N=1000000
+N=sys.argv[1]
+N = int(N)
 n=0
 
 for i in range(N):
