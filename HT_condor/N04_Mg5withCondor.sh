@@ -1,9 +1,26 @@
 #!/bin/bash
 
+
+#######################################################
+# This code generates more madgraph processes		  #
+# using gridpack.									  #
+# You just edit:									  #
+# 1. gridpack name									  #
+# 2. Number of generate events of one gen			  #
+# 3. Number of queu									  #
+#													  #
+# If you choose 2. = 10000 and 3. = 5 				  #
+# Total # of events = 10000*5 = 50000				  #
+#													  #
+# Usage: ./runCondor.sh PATH_AND_NAME_OF_GRIDPACK	  #
+#######################################################
+
 if [ ! $1 ]; then echo "usage $0 gridpack"; exit; fi
 gridpack=`readlink -e $1`
 if [ ! -f $gridpack ] || [ ! $1 ]; then echo "Error NotFound GridPack $1"; exit; fi
 
+
+# Make excution file
 cat << EOF > runCondor.sh
 #!/bin/bash
 
@@ -21,6 +38,7 @@ EOF
 chmod   +x runCondor.sh
 
 
+# Make description file
 cat << EOF > job.jdl
 executable = runCondor.sh
 universe = vanilla
@@ -37,5 +55,6 @@ queue 5
 EOF
 if [ ! -d condorLog ]; then mkdir condorLog; fi
 
+# Submit job
 condor_submit job.jdl
 
