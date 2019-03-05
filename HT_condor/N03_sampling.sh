@@ -2,7 +2,7 @@
 
 thisIndex=$1
 maxFile=$2
-listfile=$3
+listFile=$3
 
 firstIndex=`expr $thisIndex \* $maxFile + 1`
 lastIndex=`expr $firstIndex + $maxFile - 1`
