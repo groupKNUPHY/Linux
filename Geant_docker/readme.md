@@ -6,7 +6,6 @@
 ```bash
 source run_geant.sh
 docker images
-docker ps  
 source install_geant_image.sh
 ```  
 
