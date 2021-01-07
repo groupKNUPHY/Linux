@@ -1,1 +1,1 @@
-/x5/cms/jwkim/gitdir/Linux/HT_condor/run_01_gridpack.tar.gz
+/home/jwkim/run_01_gridpack.tar.gz
